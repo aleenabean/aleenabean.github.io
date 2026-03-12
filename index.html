@@ -16,10 +16,11 @@
       padding: 13px;
     }
 
-    #output div {
-      white-space: pre-wrap;
-      word-break: break-word;
-    }
+   #output div {
+     white-space: pre-wrap;
+     word-break: break-word;
+     color: #90ee90;
+}
 
     a {
       color: #4af;
@@ -157,7 +158,8 @@ let historyIdx = -1;
 function handleCommand(raw) {
   const trimmed = raw.trim();
   const echo = document.createElement('div');
-  echo.textContent = '» ' + trimmed;
+  echo.style.color = '#fff';
+  echo.textContent = '» ' + trimmed
   output.appendChild(echo);
   currentLine = null;
 
