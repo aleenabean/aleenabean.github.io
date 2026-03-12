@@ -93,9 +93,19 @@ const COMMANDS = {
   project: (args) => {
     if (!args) {
       print("a few of my personal projects are");
-      print("grether coexistence app");
-      print("sdm comparison app");
-      print("type project [project_name] to find out more");
+      
+      const p = document.createElement('div');
+      p.style.color = '#a8d8ea';
+      p.textContent = 'grether coexistence app';
+      output.appendChild(p);
+      
+      const p2 = document.createElement('div');
+      p2.style.color = '#a8d8ea';
+      p2.textContent = 'sdm comparison app';
+      output.appendChild(p2);
+      
+      print("type project [project_name] to find
+            out more");
       return;
     }
     const name = args.toLowerCase().replace(/[-_\s]/g, '');
