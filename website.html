@@ -45,7 +45,7 @@
       outline: none;
       color: #fff;
       font-family: 'Courier New', Courier, monospace;
-      font-size: 16px;
+      font-size: 10px;
       flex: 1;
       caret-color: #fff;
     }
@@ -68,42 +68,40 @@ document.addEventListener('click', () => input.focus());
 
 const COMMANDS = {
   help: () => {
-    print("Welcome to Aleena's Personal Site!  Type help for commands.");
+    print("welcome to Aleena's personal site!  type help for commands");
     print("email:   contact me (I'd love to hear from you!)");
     print("github:  see my github page");
     print("project: learn about my past projects");
   },
 
   email: () => {
-    print("I would love to hear from you! You can contact me at ", false);
-    printLink("aleenamunshi@ucla.edu", "mailto:aleenamunshi@ucla.edu");
+    print("i would love to hear from you! you can contact me at ", false);
+    printLink("aleenamunshi@g.ucla.edu", "mailto:aleenamunshi@g.ucla.edu");
   },
 
   github: () => {
-    print("Check out my github at ", false);
+    print("check out my github at ", false);
     printLink("https://github.com/aleenabean", "https://github.com/aleenabean?tab=repositories");
   },
 
   project: (args) => {
     if (!args) {
-      print("A few of my personal projects are");
-      print("Grether-coexistence-extinction");
-      print("sdm-comparison-app");
-      print("Type project [project_name] to find out more!");
+      print("a few of my personal projects are");
+      print("grether coexistence app");
+      print("sdm comparison app");
+      print("type project [project_name] to find out more");
       return;
     }
     const name = args.toLowerCase().replace(/[-_\s]/g, '');
     if (name.includes('grether') || name.includes('coexist')) {
-      print("Grether-coexistence-extinction");
-      print("Research on species coexistence and extinction dynamics,");
-      print("applying ecological theory to empirical data.");
-      print("See it at ", false);
+      print("grether coexistence app");
+      print("Research on species coexistence and extinction dynamics, applying ecological theory to empirical data.");
+      print("see it at ", false);
       printLink("github.com/aleenabean/Grether-coexistence-extinction", "https://github.com/aleenabean/Grether-coexistence-extinction");
     } else if (name.includes('sdm') || name.includes('comparison')) {
-      print("sdm-comparison-app");
-      print("A species distribution model (SDM) comparison app,");
-      print("visualizing and benchmarking different modeling approaches.");
-      print("See it at ", false);
+      print("sdm comparison app");
+      print("A species distribution model (SDM) comparison app,visualizing and benchmarking different modeling approaches.");
+      print("see it at ", false);
       printLink("github.com/aleenabean/sdm-comparison-app", "https://github.com/aleenabean/sdm-comparison-app");
     } else {
       print("project not found: " + args);
@@ -199,7 +197,7 @@ input.addEventListener('keydown', e => {
 });
 
 // ── Boot ──────────────────────────────────────────────────────────────────────
-print("Welcome to Aleena's Personal Site!  Type help for commands.");
+print("welcome to Aleena's personal site!  type help for commands");
 input.focus();
 </script>
 </body>
